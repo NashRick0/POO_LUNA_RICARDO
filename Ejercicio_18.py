@@ -1,4 +1,4 @@
-print("\nPODRUCTOS")
+print("\nPRODUCTOS")
 
 diccionario = {
     "Coca" : 20,
