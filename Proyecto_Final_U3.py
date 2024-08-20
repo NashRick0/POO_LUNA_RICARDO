@@ -49,7 +49,7 @@ class EliminarC():
     def eliminarC(self):
         cursor = connection.cursor()
         try:
-            cursor.execute("DELETE FROM clientes WHERE id_cliente = %s", (self.id_cliente))
+            cursor.execute("DELETE FROM clientes WHERE id_cliente = %s", (self.id_cliente,))
             connection.commit()
             print("Cliente con ID:",self.id_cliente, "ha sido eliminado correctamente")
         except mysql.connector.Error as err:
@@ -155,7 +155,7 @@ class EliminarE():
     def eliminarE(self):
         cursor = connection.cursor()
         try:
-            cursor.execute("DELETE FROM empleados WHERE id_empleado = %s", (self.id_empleado))
+            cursor.execute("DELETE FROM empleados WHERE id_empleado = %s", (self.id_empleado,))
             connection.commit()
             print("Empleado con ID:",self.id_empleado, "ha sido eliminado correctamente")
         except mysql.connector.Error as err:
@@ -261,7 +261,7 @@ class EliminarR():
     def eliminarR(self):
         cursor = connection.cursor()
         try:
-            cursor.execute("DELETE FROM refacciones WHERE id_refaccion = %s", (self.id_refaccion))
+            cursor.execute("DELETE FROM refacciones WHERE id_refaccion = %s", (self.id_refaccion,))
             connection.commit()
             print("Refaccion con ID:",self.id_refaccion, "ha sido eliminada correctamente")
         except mysql.connector.Error as err:
@@ -367,7 +367,7 @@ class EliminarP():
     def eliminarP(self):
         cursor = connection.cursor()
         try:
-            cursor.execute("DELETE FROM proveedores WHERE id_proveedor = %s", (self.id_proveedor))
+            cursor.execute("DELETE FROM proveedores WHERE id_proveedor = %s", (self.id_proveedor,))
             connection.commit()
             print("Proveedor con ID:",self.id_proveedor, "ha sido eliminado correctamente")
         except mysql.connector.Error as err:
